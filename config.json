@@ -1,0 +1,15 @@
+{
+	TestMysql: kts:123456@tcp(localhost:3306)/kts_test
+	TestCachePath: /mnt/storage_test/
+	TestTimeoutQueueTurnover: 2
+	TestTapeBlockSizeLimit: 10485760
+	TempTapeStoragePath: /mnt/tapes/
+	Mysql: kts:123456@tcp(localhost:3306)/kts
+	CachePath: /mnt/sdc/storage/
+	TimeoutQueueTurnover: 10
+	TapeBlockSizeLimit: 1077936128
+	TimeBeforeBackup: 10
+	NumberOfCopies: 1
+	CacheTimeLive: 120
+	DriveName: /dev/nst0
+}

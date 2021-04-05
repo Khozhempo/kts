@@ -1,0 +1,39 @@
+/dev/st*	the auto-rewind SCSI tape devices
+/dev/nst*	the nonrewind SCSI tape devices
+
+http://manpages.ubuntu.com/manpages/bionic/man1/mt-st.1.html
+
+eof	Поместить маркер конца файла в текущую позицию ленты
+asf n	Перейти к файлу с номером n
+fsf n	Перемотка ленты вперед на n файлов
+bsf n	Перемотка ленты назад на n файлов
+fsr n	Перейти на n записей вперед
+bsr	Перейти на n записей назад
+seek n	Поиск блока с заданным номером n
+eom	Переход к концу записей на ленте. Используется для дописывания файлов на ленту
+rewind	Перемотка ленты в начало
+offline	Перемотка пленки в начало и извлечение ленты из накопителя
+retension	Перетяжка ленты для снятия статических зарядов с поверхности пленки
+erase	Стирание содержимого ленты
+
+
+https://system-admins.ru/15-poleznye-linux-komand-dlya-upravleniya-lentochnymi-bibliotekami/
+
+Перемотать кассету:
+# mt -f /dev/st0 rewind 
+
+Определить, на каком блоке сейчас находится кассета:
+# mt -f /dev/st0 tell 
+
+Очистить кассету:
+# mt -f /dev/st0 erase 
+
+Перемотать кассету к концу записанных данных:
+# mt -f /dev/nst0 eod 
+
+Перемотать кассету к предыдущей записи:
+# mt -f /dev/nst0 bsfm 1 
+
+Перемотать кассету к следующей записи:
+# mt -f /dev/nst0 fsf 1
+
