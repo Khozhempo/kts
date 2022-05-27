@@ -1,6 +1,8 @@
 # KTS
 Program part of LTO tape library.
 
+!!! PERMANENTLY MOVED TO NEW ADDRESS: http://git.khoz.ru/Khoz/kts.git
+
 KTS work with LTO without ltfs and provide virtual file system (with long time cache) for user. Also has function to save over copies (more than one) of data.
 
 LTO-1(2..4) do not have file system and needs special knowledgs and software to write/read data from tape. This program create virtual file system, where shows the files on tapes. When you wants to download a file, just copy and wait while it will be get from tape. While not ready jet the hardware component (library), it works with one tape in drive or in test mode (files store on HDD).
